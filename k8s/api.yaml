@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cs411-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cs411-api
+  template:
+    metadata:
+      labels:
+        app: cs411-api
+    spec:
+      containers:
+        - name: api
+          image: cs411-project3-api:local
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          env:
+            - name: REDIS_ADDR
+              value: redis:6379
+          # TODO: add CPU/memory requests and limits, plus readiness/liveness probes.
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cs411-api
+spec:
+  selector:
+    app: cs411-api
+  ports:
+    - port: 80
+      targetPort: 8080

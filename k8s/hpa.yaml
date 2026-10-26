@@ -1,0 +1,2 @@
+# TODO: define an autoscaling/v2 HPA for Deployment/cs411-api with 2-5
+# replicas and a CPU utilization target. The public verifier checks it.
