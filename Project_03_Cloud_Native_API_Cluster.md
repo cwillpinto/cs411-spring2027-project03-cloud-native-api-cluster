@@ -5,6 +5,8 @@
 **Due:** April 30, 2027  
 **Value:** 100 points
 
+**Starter repository:** [Open the Spring 2027 starter](https://github.com/cwillpinto/cs411-spring2027-project03-cloud-native-api-cluster)
+
 ## Purpose
 
 Deploy the supplied Go API and Redis dependency as a Kubernetes service. Make the API image safe to run, add health and resource controls, implement request protection, and gather evidence of scaling and recovery under load. Explain what the evidence actually shows, including experimental limits.

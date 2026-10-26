@@ -1,5 +1,7 @@
 # CS411 Spring 2027 · Project 3: Cloud Native API Cluster
 
+Starter template: https://github.com/cwillpinto/cs411-spring2027-project03-cloud-native-api-cluster
+
 Read the included handout. The Go API and Redis counter protocol are supplied. Complete the rate limiter in `src/rate_limit.go`, harden the `Dockerfile`, add API resource/probe settings in `k8s/api.yaml`, and define the HPA in `k8s/hpa.yaml`. The public verifier checks manifest structure; live scaling and recovery require a Kubernetes cluster with metrics-server.
 
 ```sh
@@ -21,7 +23,7 @@ If Blackboard links a template repository, choose **Use this template**, create 
 For a direct clone, first create an empty repository under your account. Replace the placeholders below with the starter link supplied in Blackboard and your own empty repository URL:
 
 ```sh
-git clone <instructor-starter-url>
+git clone https://github.com/cwillpinto/cs411-spring2027-project03-cloud-native-api-cluster
 cd <cloned-directory>
 git remote rename origin upstream
 git remote add origin <your-empty-repository-url>
